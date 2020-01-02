@@ -492,8 +492,6 @@ Editing now...
 16. [Kubernetes: Flannel networking - Han's blog  (https://blog.laputa.io/kubernetes-flannel-networking-6a1cb1f8ec7c)](https://blog.laputa.io/kubernetes-flannel-networking-6a1cb1f8ec7c)
 17. [オンプレミスKubernetes のネットワーク - JANOG  (https://www.janog.gr.jp/meeting/janog43/application/files/2215/4900/5049/janog43-k8s-shirota.pdf)](https://www.janog.gr.jp/meeting/janog43/application/files/2215/4900/5049/janog43-k8s-shirota.pdf)
 18. [Debugging Kubernetes Networking | Eficode Praqma  (https://www.praqma.com/stories/debugging-kubernetes-networking/)](https://www.praqma.com/stories/debugging-kubernetes-networking/)
-
-(2)
 19. [オンプレでもIngressする - Qiita  (https://qiita.com/murata-tomohide/items/801c25492e55f672c23c)](https://qiita.com/murata-tomohide/items/801c25492e55f672c23c)
 20. [Kubernetesクラスタでmetrics-serverを導入してkubectl topや ...  (https://qiita.com/chataro0/items/28f8744e2781f730a0e6)](https://qiita.com/chataro0/items/28f8744e2781f730a0e6)
 21. [オンプレでもIngressする - Qiita  (https://qiita.com/murata-tomohide/items/801c25492e55f672c23c)](https://qiita.com/murata-tomohide/items/801c25492e55f672c23c)
