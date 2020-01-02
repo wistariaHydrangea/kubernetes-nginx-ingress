@@ -471,3 +471,31 @@ spec:
 ```
 
 Editing now...
+
+## Reference material
+
+1. [Kubernetes on CentOS7 - Qiita  (https://qiita.com/nagase/items/15726e37057e7cc3b8cd)](https://qiita.com/nagase/items/15726e37057e7cc3b8cd)
+2. [kubeadmのインストール - Kubernetes  (https://kubernetes.io/ja/docs/setup/independent/install-kubeadm/)](https://kubernetes.io/ja/docs/setup/independent/install-kubeadm/)
+3. [kubeadmを使用したシングルマスタークラスターの作成 - Kubernetes  (https://kubernetes.io/ja/docs/setup/independent/create-cluster-kubeadm/)](https://kubernetes.io/ja/docs/setup/independent/create-cluster-kubeadm/)
+4. [2019年版・Kubernetesクラスタ構築入門 | さくらのナレッジ  (https://knowledge.sakura.ad.jp/20955/)](https://knowledge.sakura.ad.jp/20955/)
+5. [kubernetesにNGINX Ingress Controllerを追加して、ホスト名で ...  (https://qiita.com/megasys1968/items/aa94ddfb92f57e08c4dd)](https://qiita.com/megasys1968/items/aa94ddfb92f57e08c4dd)
+6. [MetalLB, bare metal load-balancer for Kubernetes  (https://metallb.universe.tf/)](https://metallb.universe.tf/)
+7. [ingress-nginx/index.md at master · kubernetes/ingress-nginx ...  (https://github.com/kubernetes/ingress-nginx/blob/master/docs/deploy/index.md)](https://github.com/kubernetes/ingress-nginx/blob/master/docs/deploy/index.md)
+8. [Installation Guide - NGINX Ingress Controller - Kubernetes  (https://kubernetes.github.io/ingress-nginx/deploy/)](https://kubernetes.github.io/ingress-nginx/deploy/)
+9. [オンプレミスのKubernetesにNginx-Ingress-Controllerを設定する ...  (https://qiita.com/soumi/items/c6358e5e859004c2961c)](https://qiita.com/soumi/items/c6358e5e859004c2961c)
+10. [Ingress - Kubernetes  (https://kubernetes.io/docs/concepts/services-networking/ingress/)](https://kubernetes.io/docs/concepts/services-networking/ingress/)
+11. [kubernetesにNginx Ingress Controllerをセットアップ - Qiita  (https://qiita.com/sheepland/items/37ece5800eb6972ffd91)](https://qiita.com/sheepland/items/37ece5800eb6972ffd91)
+12. [オンプレでもIngressする - Qiita  (https://qiita.com/murata-tomohide/items/801c25492e55f672c23c)](https://qiita.com/murata-tomohide/items/801c25492e55f672c23c)
+13. [Kubernetes に NGINX Ingress Controller をデプロイする方法 ...  (https://garafu.blogspot.com/2019/06/install-nginxingress.html)](https://garafu.blogspot.com/2019/06/install-nginxingress.html)
+14. [kubernetes/ingress-nginx: NGINX Ingress Controller ... - GitHub  (https://github.com/kubernetes/ingress-nginx)](https://github.com/kubernetes/ingress-nginx)
+15. [DockerとKubernetesのPodのネットワーキングについてまとめました  (https://foobaron.hatenablog.com/entry/k8s-pod-networking)](https://foobaron.hatenablog.com/entry/k8s-pod-networking)
+16. [Kubernetes: Flannel networking - Han's blog  (https://blog.laputa.io/kubernetes-flannel-networking-6a1cb1f8ec7c)](https://blog.laputa.io/kubernetes-flannel-networking-6a1cb1f8ec7c)
+17. [オンプレミスKubernetes のネットワーク - JANOG  (https://www.janog.gr.jp/meeting/janog43/application/files/2215/4900/5049/janog43-k8s-shirota.pdf)](https://www.janog.gr.jp/meeting/janog43/application/files/2215/4900/5049/janog43-k8s-shirota.pdf)
+18. [Debugging Kubernetes Networking | Eficode Praqma  (https://www.praqma.com/stories/debugging-kubernetes-networking/)](https://www.praqma.com/stories/debugging-kubernetes-networking/)
+
+(2)
+19. [オンプレでもIngressする - Qiita  (https://qiita.com/murata-tomohide/items/801c25492e55f672c23c)](https://qiita.com/murata-tomohide/items/801c25492e55f672c23c)
+20. [Kubernetesクラスタでmetrics-serverを導入してkubectl topや ...  (https://qiita.com/chataro0/items/28f8744e2781f730a0e6)](https://qiita.com/chataro0/items/28f8744e2781f730a0e6)
+21. [オンプレでもIngressする - Qiita  (https://qiita.com/murata-tomohide/items/801c25492e55f672c23c)](https://qiita.com/murata-tomohide/items/801c25492e55f672c23c)
+22. [Kubernetesクラスタでmetrics-serverを導入してkubectl topや ...  (https://qiita.com/chataro0/items/28f8744e2781f730a0e6)](https://qiita.com/chataro0/items/28f8744e2781f730a0e6)
+23. [TLS/HTTPS - NGINX Ingress Controller - Kubernetes  (https://kubernetes.github.io/ingress-nginx/user-guide/tls/)](https://kubernetes.github.io/ingress-nginx/user-guide/tls/)
