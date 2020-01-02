@@ -164,9 +164,9 @@ $ kubectl get pod --all-namespaces
 NAMESPACE        NAME                                                   READY   STATUS    RESTARTS   AGE
 kube-system      coredns-5644d7b6d9-ws6lh                               1/1     Running   0          7d
 kube-system      coredns-5644d7b6d9-x9vr8                               1/1     Running   0          7d
-kube-system      etcd-master-node.kyukeispaces.com                      1/1     Running   0          7d
-kube-system      kube-apiserver-master-node.kyukeispaces.com            1/1     Running   0          7d
-kube-system      kube-controller-manager-master-node.kyukeispaces.com   1/1     Running   0          7d
+kube-system      etcd-master-node.example.com                      1/1     Running   0          7d
+kube-system      kube-apiserver-master-node.example.com            1/1     Running   0          7d
+kube-system      kube-controller-manager-master-node.example.com   1/1     Running   0          7d
 kube-system      kube-flannel-ds-amd64-c6gwk                             1/1     Running   0          7d
 kube-system      kube-flannel-ds-amd64-rxc6b                             1/1     Running   0          7d
 kube-system      kube-flannel-ds-amd64-t9hjw                             1/1     Running   0          7d
@@ -298,25 +298,25 @@ Check if an external IP address is assigned to EXTERNAL-IP
 ```terminal
 $ kubectl get all,node,ingress,configmap -A -o wide
 NAMESPACE        NAME                                                       READY   STATUS    RESTARTS   AGE     IP              NODE                            NOMINATED NODE   READINESS GATES
-ingress-nginx    pod/nginx-ingress-controller-568867bf56-jb65q              1/1     Running   0          16m     10.244.2.4      worker-node2.kyukeispaces.com   <none>           <none>
-kube-system      pod/coredns-5644d7b6d9-jqxfd                               1/1     Running   0          147m    10.244.0.3      master-node.kyukeispaces.com    <none>           <none>
-kube-system      pod/coredns-5644d7b6d9-px7tg                               1/1     Running   0          147m    10.244.0.2      master-node.kyukeispaces.com    <none>           <none>
-kube-system      pod/etcd-master-node.kyukeispaces.com                      1/1     Running   0          146m    172.16.10.114   master-node.kyukeispaces.com    <none>           <none>
-kube-system      pod/kube-apiserver-master-node.kyukeispaces.com            1/1     Running   0          146m    172.16.10.114   master-node.kyukeispaces.com    <none>           <none>
-kube-system      pod/kube-controller-manager-master-node.kyukeispaces.com   1/1     Running   0          146m    172.16.10.114   master-node.kyukeispaces.com    <none>           <none>
-kube-system      pod/kube-flannel-ds-amd64-7cggf                            1/1     Running   0          138m    172.16.10.116   worker-node1.kyukeispaces.com   <none>           <none>
-kube-system      pod/kube-flannel-ds-amd64-l6vww                            1/1     Running   0          134m    172.16.10.117   worker-node2.kyukeispaces.com   <none>           <none>
-kube-system      pod/kube-flannel-ds-amd64-rnt5x                            1/1     Running   0          142m    172.16.10.114   master-node.kyukeispaces.com    <none>           <none>
-kube-system      pod/kube-proxy-4swl5                                       1/1     Running   0          147m    172.16.10.114   master-node.kyukeispaces.com    <none>           <none>
-kube-system      pod/kube-proxy-dmgdj                                       1/1     Running   0          134m    172.16.10.117   worker-node2.kyukeispaces.com   <none>           <none>
-kube-system      pod/kube-proxy-jz2cz                                       1/1     Running   0          138m    172.16.10.116   worker-node1.kyukeispaces.com   <none>           <none>
-kube-system      pod/kube-scheduler-master-node.kyukeispaces.com            1/1     Running   0          146m    172.16.10.114   master-node.kyukeispaces.com    <none>           <none>
-metallb-system   pod/controller-57967b9448-khxpd                            1/1     Running   0          19m     10.244.1.6      worker-node1.kyukeispaces.com   <none>           <none>
-metallb-system   pod/speaker-4nhtk                                          1/1     Running   0          19m     172.16.10.116   worker-node1.kyukeispaces.com   <none>           <none>
-metallb-system   pod/speaker-nx7cd                                          1/1     Running   0          19m     172.16.10.114   master-node.kyukeispaces.com    <none>           <none>
-metallb-system   pod/speaker-wc5gg                                          1/1     Running   0          19m     172.16.10.117   worker-node2.kyukeispaces.com   <none>           <none>
-ns-test          pod/httpd-75cb4864cc-trljc                                 1/1     Running   0          2m30s   10.244.1.9      worker-node1.kyukeispaces.com   <none>           <none>
-ns-test          pod/nginx-5c559d5697-mtgj5                                 1/1     Running   0          2m30s   10.244.1.10     worker-node1.kyukeispaces.com   <none>           <none>
+ingress-nginx    pod/nginx-ingress-controller-568867bf56-jb65q              1/1     Running   0          16m     10.244.2.4      worker-node2.example.com   <none>           <none>
+kube-system      pod/coredns-5644d7b6d9-jqxfd                               1/1     Running   0          147m    10.244.0.3      master-node.example.com    <none>           <none>
+kube-system      pod/coredns-5644d7b6d9-px7tg                               1/1     Running   0          147m    10.244.0.2      master-node.example.com    <none>           <none>
+kube-system      pod/etcd-master-node.example.com                      1/1     Running   0          146m    172.16.10.114   master-node.example.com    <none>           <none>
+kube-system      pod/kube-apiserver-master-node.example.com            1/1     Running   0          146m    172.16.10.114   master-node.example.com    <none>           <none>
+kube-system      pod/kube-controller-manager-master-node.example.com   1/1     Running   0          146m    172.16.10.114   master-node.example.com    <none>           <none>
+kube-system      pod/kube-flannel-ds-amd64-7cggf                            1/1     Running   0          138m    172.16.10.116   worker-node1.example.com   <none>           <none>
+kube-system      pod/kube-flannel-ds-amd64-l6vww                            1/1     Running   0          134m    172.16.10.117   worker-node2.example.com   <none>           <none>
+kube-system      pod/kube-flannel-ds-amd64-rnt5x                            1/1     Running   0          142m    172.16.10.114   master-node.example.com    <none>           <none>
+kube-system      pod/kube-proxy-4swl5                                       1/1     Running   0          147m    172.16.10.114   master-node.example.com    <none>           <none>
+kube-system      pod/kube-proxy-dmgdj                                       1/1     Running   0          134m    172.16.10.117   worker-node2.example.com   <none>           <none>
+kube-system      pod/kube-proxy-jz2cz                                       1/1     Running   0          138m    172.16.10.116   worker-node1.example.com   <none>           <none>
+kube-system      pod/kube-scheduler-master-node.example.com            1/1     Running   0          146m    172.16.10.114   master-node.example.com    <none>           <none>
+metallb-system   pod/controller-57967b9448-khxpd                            1/1     Running   0          19m     10.244.1.6      worker-node1.example.com   <none>           <none>
+metallb-system   pod/speaker-4nhtk                                          1/1     Running   0          19m     172.16.10.116   worker-node1.example.com   <none>           <none>
+metallb-system   pod/speaker-nx7cd                                          1/1     Running   0          19m     172.16.10.114   master-node.example.com    <none>           <none>
+metallb-system   pod/speaker-wc5gg                                          1/1     Running   0          19m     172.16.10.117   worker-node2.example.com   <none>           <none>
+ns-test          pod/httpd-75cb4864cc-trljc                                 1/1     Running   0          2m30s   10.244.1.9      worker-node1.example.com   <none>           <none>
+ns-test          pod/nginx-5c559d5697-mtgj5                                 1/1     Running   0          2m30s   10.244.1.10     worker-node1.example.com   <none>           <none>
 
 NAMESPACE       NAME                    TYPE           CLUSTER-IP       EXTERNAL-IP     PORT(S)                      AGE     SELECTOR
 default         service/kubernetes      ClusterIP      10.96.0.1        <none>          443/TCP                      147m    <none>
@@ -349,12 +349,12 @@ ns-test          replicaset.apps/httpd-75cb4864cc                      1        
 ns-test          replicaset.apps/nginx-5c559d5697                      1         1         1       2m30s   nginx                      nginx:alpine                                                            app=nginx,pod-template-hash=5c559d5697
 
 NAMESPACE   NAME                                 STATUS   ROLES    AGE    VERSION   INTERNAL-IP     EXTERNAL-IP   OS-IMAGE                KERNEL-VERSION               CONTAINER-RUNTIME
-            node/master-node.kyukeispaces.com    Ready    master   147m   v1.16.2   172.16.10.114   <none>        CentOS Linux 7 (Core)   3.10.0-1062.1.2.el7.x86_64   docker://19.3.4
-            node/worker-node1.kyukeispaces.com   Ready    <none>   138m   v1.16.2   172.16.10.116   <none>        CentOS Linux 7 (Core)   3.10.0-1062.1.2.el7.x86_64   docker://19.3.4
-            node/worker-node2.kyukeispaces.com   Ready    <none>   134m   v1.16.2   172.16.10.117   <none>        CentOS Linux 7 (Core)   3.10.0-1062.1.2.el7.x86_64   docker://19.3.4
+            node/master-node.example.com    Ready    master   147m   v1.16.2   172.16.10.114   <none>        CentOS Linux 7 (Core)   3.10.0-1062.1.2.el7.x86_64   docker://19.3.4
+            node/worker-node1.example.com   Ready    <none>   138m   v1.16.2   172.16.10.116   <none>        CentOS Linux 7 (Core)   3.10.0-1062.1.2.el7.x86_64   docker://19.3.4
+            node/worker-node2.example.com   Ready    <none>   134m   v1.16.2   172.16.10.117   <none>        CentOS Linux 7 (Core)   3.10.0-1062.1.2.el7.x86_64   docker://19.3.4
 
 NAMESPACE   NAME                    HOSTS                    ADDRESS         PORTS   AGE
-ns-test     ingress.extensions/lb   nginx.kyukeispaces.com   172.16.10.160   80      2m30s
+ns-test     ingress.extensions/lb   nginx.example.com   172.16.10.160   80      2m30s
 ```
 
 Create Ingress and app manifest and check operation
@@ -378,7 +378,7 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
-    - host: nginx.kyukeispaces.com
+    - host: nginx.example.com
       http:
         paths:
           - path: /apache
