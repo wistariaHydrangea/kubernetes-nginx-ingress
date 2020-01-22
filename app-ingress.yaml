@@ -1,0 +1,32 @@
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ingress-ns
+
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: lb-ingress-nginx
+  namespace: ingress-ns
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  rules:
+    - host: nginx.example.com
+      http:
+        paths:
+          - path: /apache
+            backend:
+              serviceName: apache-svc
+              servicePort: 80
+          - path: /nginx
+            backend:
+              serviceName: nginx-svc
+              servicePort: 80
+          - path: /
+            backend:
+              serviceName: blackhole
+              servicePort: 80
