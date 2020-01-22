@@ -1,0 +1,38 @@
+
+### service of app-apache
+apiVersion: v1
+kind: Service
+metadata:
+  name: apache-svc
+  namespace: ingress-ns
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: httpd
+  type: NodePort
+
+---
+### Deploy for app-apache
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpd
+  namespace: ingress-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: httpd
+  template:
+    metadata:
+      labels:
+        app: httpd
+    spec:
+      containers:
+      - image: httpd:alpine
+        name: httpd
+        ports:
+        - containerPort: 80
