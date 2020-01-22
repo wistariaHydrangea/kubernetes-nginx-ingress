@@ -164,9 +164,9 @@ $ kubectl get pod --all-namespaces
 NAMESPACE        NAME                                                   READY   STATUS    RESTARTS   AGE
 kube-system      coredns-5644d7b6d9-ws6lh                               1/1     Running   0          7d
 kube-system      coredns-5644d7b6d9-x9vr8                               1/1     Running   0          7d
-kube-system      etcd-master-node.example.com                      1/1     Running   0          7d
-kube-system      kube-apiserver-master-node.example.com            1/1     Running   0          7d
-kube-system      kube-controller-manager-master-node.example.com   1/1     Running   0          7d
+kube-system      etcd-master-node.example.com                           1/1     Running   0          7d
+kube-system      kube-apiserver-master-node.example.com                 1/1     Running   0          7d
+kube-system      kube-controller-manager-master-node.example.com        1/1     Running   0          7d
 kube-system      kube-flannel-ds-amd64-c6gwk                             1/1     Running   0          7d
 kube-system      kube-flannel-ds-amd64-rxc6b                             1/1     Running   0          7d
 kube-system      kube-flannel-ds-amd64-t9hjw                             1/1     Running   0          7d
@@ -302,16 +302,16 @@ NAMESPACE        NAME                                                       READ
 ingress-nginx    pod/nginx-ingress-controller-568867bf56-jb65q              1/1     Running   0          16m     10.244.2.4      worker-node2.example.com   <none>           <none>
 kube-system      pod/coredns-5644d7b6d9-jqxfd                               1/1     Running   0          147m    10.244.0.3      master-node.example.com    <none>           <none>
 kube-system      pod/coredns-5644d7b6d9-px7tg                               1/1     Running   0          147m    10.244.0.2      master-node.example.com    <none>           <none>
-kube-system      pod/etcd-master-node.example.com                      1/1     Running   0          146m    172.16.10.114   master-node.example.com    <none>           <none>
-kube-system      pod/kube-apiserver-master-node.example.com            1/1     Running   0          146m    172.16.10.114   master-node.example.com    <none>           <none>
-kube-system      pod/kube-controller-manager-master-node.example.com   1/1     Running   0          146m    172.16.10.114   master-node.example.com    <none>           <none>
+kube-system      pod/etcd-master-node.example.com                           1/1     Running   0          146m    172.16.10.114   master-node.example.com    <none>           <none>
+kube-system      pod/kube-apiserver-master-node.example.com                 1/1     Running   0          146m    172.16.10.114   master-node.example.com    <none>           <none>
+kube-system      pod/kube-controller-manager-master-node.example.com        1/1     Running   0          146m    172.16.10.114   master-node.example.com    <none>           <none>
 kube-system      pod/kube-flannel-ds-amd64-7cggf                            1/1     Running   0          138m    172.16.10.116   worker-node1.example.com   <none>           <none>
 kube-system      pod/kube-flannel-ds-amd64-l6vww                            1/1     Running   0          134m    172.16.10.117   worker-node2.example.com   <none>           <none>
 kube-system      pod/kube-flannel-ds-amd64-rnt5x                            1/1     Running   0          142m    172.16.10.114   master-node.example.com    <none>           <none>
 kube-system      pod/kube-proxy-4swl5                                       1/1     Running   0          147m    172.16.10.114   master-node.example.com    <none>           <none>
 kube-system      pod/kube-proxy-dmgdj                                       1/1     Running   0          134m    172.16.10.117   worker-node2.example.com   <none>           <none>
 kube-system      pod/kube-proxy-jz2cz                                       1/1     Running   0          138m    172.16.10.116   worker-node1.example.com   <none>           <none>
-kube-system      pod/kube-scheduler-master-node.example.com            1/1     Running   0          146m    172.16.10.114   master-node.example.com    <none>           <none>
+kube-system      pod/kube-scheduler-master-node.example.com                 1/1     Running   0          146m    172.16.10.114   master-node.example.com    <none>           <none>
 metallb-system   pod/controller-57967b9448-khxpd                            1/1     Running   0          19m     10.244.1.6      worker-node1.example.com   <none>           <none>
 metallb-system   pod/speaker-4nhtk                                          1/1     Running   0          19m     172.16.10.116   worker-node1.example.com   <none>           <none>
 metallb-system   pod/speaker-nx7cd                                          1/1     Running   0          19m     172.16.10.114   master-node.example.com    <none>           <none>
