@@ -52,12 +52,12 @@ $ sudo systemctl stop firewalld
 $ sudo systemctl disable firewalld
 ```
 
-4. Fix IP to NIC
+## 4. Fix IP to NIC
 
 ```txt
 ```
 
-5. OS pachage update
+## 5. OS pachage update
 
 ```txt
 $ sudo yum -y update
@@ -120,7 +120,7 @@ $ sudo sysctl --system
 
 ### Initialization of master node
 
-Initialize master with `kube init` command.
+Initialize master with __kube in command.
 The meaning of the parameters is as follows.
 
 --apiserver-advertise-address: Specify the Listen IP address of APIServer, usually the IP address of eth0, which is the NIC of Master node
@@ -134,8 +134,8 @@ $ sudo kubeadm init \
     --service-cidr 172.16.130.0/24
 ```
 
-If you want to cancel after joining the cluster with `kubeadm join`, use` kubeadm reset`.
-Note that after doing `kubeadm reset`, you need to remove the CNI added during` kubeadm join`.
+If you want to cancel after joining the cluster with __kubeadm join__, use __kubeadm reset__.
+Note that after doing __kubeadm reset__, you need to remove the CNI added during __kubeadm join__.
 
 ```terminal
 $ kubeadm reset
@@ -146,7 +146,7 @@ $ ip link delete flannel.1
 Execute the following command to make kubectl work for non-root user.
 
 ```terminal
-$ mkdir -p $HOME/.kube
+$ sudo mkdir -p $HOME/.kube
 $ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 $ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
@@ -179,7 +179,8 @@ Install metric server
 $ git clone https://github.com/kubernetes-sigs/metrics-server.git
 ```
 
-Even if `kubectl apply` as it is, it can not be started normally, so add` command` part
+Even if __kubectl apply__ as it is, it can not be started normally, so add `command` part.
+`Node-role.kubernetes.io/master: ""` is required to use the __kubectl top__ command.
 
 (metrics-server-deployment.yaml)
 
