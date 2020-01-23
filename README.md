@@ -129,7 +129,7 @@ The meaning of the parameters is as follows.
 
 ```terminal
 $ sudo kubeadm init \
-    --apiserver-advertise-address 172.16.10.114 \
+    --apiserver-advertise-address 172.16.10.160 \
     --pod-network-cidr 10.244.0.0/16 \
     --service-cidr 172.16.130.0/24
 ```
