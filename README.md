@@ -30,14 +30,14 @@ Perform the following tasks on all VMs
 
 The official document of kubernetes says `You have to do this until SELinux support is improved in the kubelet.`, and SELinux needs to be disabled because kubelet is not supported.
 
-```txt
-# setenforce 0
-# sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
+```terminal
+$ sudo setenforce 0
+$ sudo sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
 ```
 
 ## 2. SWAP Invalidation
 
-```txt
+```terminal
 $ sudo swapoff -a
 $ sudo vim /etc/fstab
 /dev/mapper/centos-swap swap         swap    defaults        0 0
@@ -47,7 +47,7 @@ $ sudo vim /etc/fstab
 
 ## 3. Firewalld Invalidation
 
-```txt
+```terminal
 $ sudo systemctl stop firewalld
 $ sudo systemctl disable firewalld
 ```
@@ -59,7 +59,7 @@ $ sudo systemctl disable firewalld
 
 ## 5. OS pachage update
 
-```txt
+```terminal
 $ sudo yum -y update
 ```
 
@@ -67,7 +67,7 @@ $ sudo yum -y update
 
 Install and launch the latest version of Docker from the official repository.
 
-```txt
+```terminal
 $ sudo yum -y install yum-utils device-mapper-persistent-data lvm2
 $ sudo yum-config-manager \
     --add-repo https://download.docker.com/linux/centos/docker-ce.repo
@@ -79,7 +79,7 @@ $ sudo systemctl enable docker && sudo systemctl start docker
 
 Set kubernetes repository.
 
-```erpo
+```terminal
 $ sudo sh -c "cat <<EOF > /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
 name=Kubernetes
@@ -106,7 +106,7 @@ $ sudo systemctl enable kubelet && sudo systemctl start kubelet
 
 RHEL / CentOS 7 users added a parameter to avoid bypassing iptables
 
-```conf
+```terminal
 $ sudo sh -c "cat <<EOF >  /etc/sysctl.d/k8s.conf
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
