@@ -277,6 +277,7 @@ metadata:
   namespace: metallb-system
   name: config
 data:
+  ### Change ipaddress according to the environment.
   config: |
     address-pools:
     - name: my-ip-space
@@ -360,117 +361,8 @@ ns-test     ingress.extensions/lb   nginx.example.com   172.16.10.160   80      
 
 Create Ingress and app manifest and check operation
 
-(testApp-ingress.yaml)
-
-```yaml
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: ns-test
-
----
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: lb
-  namespace: ns-test
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
-spec:
-  rules:
-    - host: nginx.example.com
-      http:
-        paths:
-          - path: /apache
-            backend:
-              serviceName: apache-svc
-              servicePort: 80
-          - path: /nginx
-            backend:
-              serviceName: nginx-svc
-              servicePort: 80
-          - path: /
-            backend:
-              serviceName: blackhole
-              servicePort: 80
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: apache-svc
-  namespace: ns-test
-spec:
-  ports:
-  - port: 80
-    protocol: TCP
-    targetPort: 80
-  selector:
-    app: httpd
-  type: NodePort
-
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: httpd
-  namespace: ns-test
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: httpd
-  template:
-    metadata:
-      labels:
-        app: httpd
-    spec:
-      containers:
-      - image: httpd:alpine
-        name: httpd
-        ports:
-        - containerPort: 80
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: nginx-svc
-  namespace: ns-test
-spec:
-  ports:
-  - port: 80
-    protocol: TCP
-    targetPort: 80
-  selector:
-    app: nginx
-  type: NodePort
-
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: nginx
-  namespace: ns-test
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: nginx
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - image: nginx:alpine
-        name: nginx
-        ports:
-        - containerPort: 80
-
+```terminal
 ```
-
 Editing now...
 
 ## Reference material
